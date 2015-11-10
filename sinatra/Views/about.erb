@@ -1,0 +1,21 @@
+<h1>Hi I am Sebastian</h1>
+<p>Im the author of this website</p>
+<a href="/home">Home Page</a>
+
+<% if Time.now.monday? %>
+	<p>
+	Im not a big fan of tuesdays like today 
+	</p>
+<% end %>
+
+<p>
+	<% 
+	bday = Time.new(1997, 7, 22)
+	now = Time.now
+	@years_ago = now.year - bday.year
+	%>
+	Sebastian was born 
+	<%= @years_ago %>
+	years ago.
+
+</p>

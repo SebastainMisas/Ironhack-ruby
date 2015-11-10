@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+</head>
+<body>
+	<center>
+	<header>Augmented reality news</header>
+	<div>
+	<% @posts.each_with_index do |post, index| %>
+  	<a href="/post/<%= index%>"><%= post.name %></a><br>
+	<% end %>
+	<div>
+	</center>
+
+<!-- make a new post, Cannot make new post until registed -->
+	<a href="/new_post">New Post</a><br>
+
+
+<!-- register  -->
+	<a href="/registration">Create profile</a>
+
+
+
+</body>
+</html>
+

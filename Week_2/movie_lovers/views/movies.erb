@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movies</title>
+</head>
+	<center>
+	<body onload="alert('Which of these movies was made in 1999?')">
+		<br>
+		<br>
+		<header><strong style="font-size: 200%;">Click on a movie!</strong></header>
+		<br>
+		<br>
+		<br>
+		<% @movies.each do |movie|%>
+			<% if movie.poster == nil %>
+				
+			<% elsif movie == @correct_movie %>
+				<img onclick="alert('Correct!')" width="300px" src="<%= movie.poster %>">
+			<% else%>
+				<img onclick="alert('Wrong!')" width="300px" src="<%= movie.poster %>">
+			<% end%>
+		<% end %>
+
+	</body>
+	</center>
+</html>
